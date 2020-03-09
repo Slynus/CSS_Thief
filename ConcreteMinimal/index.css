@@ -2,13 +2,14 @@
     border:  2px solid red;
 } */
 
-/* img {
+img {
     max-width: 100%;
-} */
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
+
 
 body {
     --cc-green : #e1eae6 ;
@@ -17,7 +18,16 @@ body {
     --cc-red : #ffe7e3;
     --cc-black : #242f2e;
     --cc-orange : #ffa661;
-    /* min-height: 100vh; */
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#menu {
+    display: none;
 }
 
 #main {
@@ -32,15 +42,29 @@ body {
     display:flex;
 }
 
+#content_container {
+    display: grid;
+    grid-template: 72% 28% / 1fr;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+#minor {
+    display: flex;
+    justify-content: space-between;
+}
 
 #page_selector {
     background-color: var(--cc-green);
+    flex-grow : 1;
 }
 
 #cactus_concrete {
     background-color: var(--cc-blue);
+    flex-grow : 2;
 }
 
 #cactus_exotic{
     background-color: var(--cc-red);
+    flex-grow : 2;
 }
