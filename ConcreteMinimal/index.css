@@ -1,0 +1,46 @@
+/* div {
+    border:  2px solid red;
+} */
+
+/* img {
+    max-width: 100%;
+} */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+    --cc-green : #e1eae6 ;
+    --cc-white : #fdf8f4;
+    --cc-blue : #e3f7ff;
+    --cc-red : #ffe7e3;
+    --cc-black : #242f2e;
+    --cc-orange : #ffa661;
+    /* min-height: 100vh; */
+}
+
+#main {
+    background-color: var(--cc-white);
+    display: grid;
+    grid-template: 1fr / 56% 44%;
+}
+
+#big_cactus_container {
+    /* background-image: url(./media/cactus_big.jpg); */
+    background-color: var(--cc-green);
+    display:flex;
+}
+
+
+#page_selector {
+    background-color: var(--cc-green);
+}
+
+#cactus_concrete {
+    background-color: var(--cc-blue);
+}
+
+#cactus_exotic{
+    background-color: var(--cc-red);
+}
