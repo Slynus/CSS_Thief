@@ -2,14 +2,9 @@
     border:  2px solid red;
 } */
 
-img {
-    max-width: 100%;
-}
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
 
 body {
     --cc-green : #e1eae6 ;
@@ -34,13 +29,26 @@ body {
     background-color: var(--cc-white);
     display: grid;
     grid-template: 1fr / 56% 44%;
+    max-height: 100vh;
+    min-height: 100vh;
+    max-width: 100vw;
+    min-width: 100vw;
+
 }
 
 #big_cactus_container {
     /* background-image: url(./media/cactus_big.jpg); */
     background-color: var(--cc-green);
-    display:flex;
+    /* display:flex; */
+    max-width: 100%;
+
 }
+
+#big_cactus_img {
+    max-width: 100%;
+    /* object-fit: cover; */
+}
+
 
 #content_container {
     display: grid;
