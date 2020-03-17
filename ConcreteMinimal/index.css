@@ -29,7 +29,6 @@ body {
     min-height: 100vh;
     max-width: 100vw;
     min-width: 100vw;
-
 }
 
 #big_cactus_container {
@@ -46,7 +45,6 @@ body {
     /* border: solid; */
     height: 100vh;
 }
-
 
 #content_container {
     display: grid;
@@ -73,4 +71,25 @@ body {
 #cactus_exotic{
     background-color: var(--cc-red);
     flex-grow : 2;
+}
+
+.fontGentium {
+    font-family: 'Gentium Basic', serif;
+}
+
+.fontJosefin {
+    font-family: 'Josefin Sans', serif;
+}
+
+.fontstyleA{
+    font-weight: 1000;
+    font-size: 4em;
+}
+
+.fontstyleB{
+    font-size: 2em;
+}
+
+.fontstyleC{
+    font-size: 2em;
 }
