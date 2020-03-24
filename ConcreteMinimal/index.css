@@ -53,6 +53,16 @@ body {
     min-height: 100vh;
 }
 
+#major {
+    display: grid;
+    grid-template-columns: 30% 35% 35%;
+    /* grid-template-rows: auto; */
+    align-items: center;
+}
+
+#dialog {
+}
+
 #minor {
     display: flex;
     justify-content: space-between;
@@ -83,11 +93,13 @@ body {
 
 .fontstyleA{
     font-weight: 1000;
-    font-size: 4em;
+    font-size: 6em;
+    line-height: 1em;
 }
 
 .fontstyleB{
-    font-size: 2em;
+    font-weight: 200;
+    font-size:1em;
 }
 
 .fontstyleC{
