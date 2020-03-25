@@ -60,18 +60,29 @@ body {
     align-items: center;
 }
 
+/* 
+// TO DO GO TO FLEX
+#dialog {
+    display: flex;
+    flex-direction: column;
+} */
+
 #button_explore {
     border: none black 1px;
     border-radius: 50px;
     box-shadow: 0px 0px 2px 3px #ff913b;
     padding: 1em calc(1em + 8px) 1em calc(1em + 8px);
-    white-space:pre;
 }
 
 #button_explore:active {
     background-color: #e5e0dd;
     padding: 1em calc(0.8em + 8px) 1em calc(1.2em + 8px);
     box-shadow: 0px 0px 2px 3px #ff913b, inset 0px 7px 9px -7px rgba(0,0,0,0.7);
+}
+
+#p_explore {
+    white-space:pre;
+    margin: 0;
 }
 
 #minor {
