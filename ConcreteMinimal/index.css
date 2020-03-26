@@ -9,6 +9,9 @@ body {
     --cc-red : #ffe7e3;
     --cc-black : #242f2e;
     --cc-orange : #ffa661;
+    --cc-orange-glow : #ff913b;
+    --cc-white-darker: #e5e0dd;
+    --cc-green-darker: #cdd5d1;
     margin: 0;
     padding: 0;
     max-height: 100vh;
@@ -70,14 +73,14 @@ body {
 #button_explore {
     border: none black 1px;
     border-radius: 50px;
-    box-shadow: 0px 0px 2px 3px #ff913b;
+    box-shadow: 0px 0px 2px 3px var(--cc-orange-glow);
     padding: 1em calc(1em + 8px) 1em calc(1em + 8px);
 }
 
 #button_explore:active {
-    background-color: #e5e0dd;
+    background-color: var(--cc-white-darker);
     padding: 1em calc(0.8em + 8px) 1em calc(1.2em + 8px);
-    box-shadow: 0px 0px 2px 3px #ff913b, inset 0px 7px 9px -7px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 2px 3px var(--cc-orange-glow), inset 0px 7px 9px -7px rgba(0,0,0,0.7);
 }
 
 #p_explore {
@@ -93,6 +96,23 @@ body {
 #page_selector {
     background-color: var(--cc-green);
     flex-grow : 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items : center
+}
+
+.page_selector {
+    background-color: var(--cc-green);
+    border: solid black 1px;
+    border-radius: 100%;
+    height: 3.8em;
+    width: 3.8em;
+}
+
+.page_selector:active {
+    background-color: var(--cc-green-darker);
+    box-shadow: inset 0px 7px 9px -7px rgba(0,0,0,0.7)
 }
 
 #cactus_concrete {
@@ -127,4 +147,8 @@ body {
 .fontstyleC{
     font-weight: 900;
     font-size: 1em;
+}
+
+strong {
+    font-size: 1.5em;
 }
