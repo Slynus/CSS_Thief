@@ -26,7 +26,53 @@ body {
 }
 
 #menu {
-    display: none;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 16.8% 70% 1fr;
+    width: 100vw;
+}
+
+#menu * {
+    align-self: center;
+    justify-self: right;
+}
+
+#brand_container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-self: stretch;
+}
+
+#brand_container * {
+    margin: 0.6em;
+}
+
+#menu_list {
+    display: flex;
+    justify-content: center;
+    justify-self: stretch;
+}
+
+#menu_list p {
+    margin: 2rem;
+}
+
+#menu_list p:hover {
+    text-decoration: underline;
+}
+
+#cart {
+    margin-right: 6rem;
+}
+
+#logo_container {
+    height: 3.5em;
+    margin-left: 7vw;
+}
+
+#cart {
+    height: 2em;
 }
 
 #main {
@@ -40,7 +86,6 @@ body {
 }
 
 #big_cactus_container {
-    /* background-image: url(./media/cactus_big_3.jpg); */
     background-color: var(--cc-green);
     background: rgb(214, 229, 224);
     background: linear-gradient(0deg, rgba(214, 229, 224, 1) 0%, rgba(225, 236, 230, 1) 100%);
@@ -50,7 +95,6 @@ body {
 #big_cactus_img {
     width: 100%;
     object-fit: contain;
-    /* border: solid; */
     height: 100vh;
 }
 
@@ -143,14 +187,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background-position: right 10% bottom 10%;
+    background-size: 40%;
+    background-repeat: no-repeat;
 }
 
 #cactus_concrete {
     background-color: var(--cc-blue);
+    background-image: url(./media/cactus_little3-tr.png);
 }
 
 #cactus_exotic {
     background-color: var(--cc-red);
+    background-image: url(./media/cactus_little1v3-tr.png);
 }
 
 .cactus_container p {
@@ -166,6 +215,10 @@ body {
 .cactus_container p:last-child {
     margin-top: auto;
     margin-bottom: 2rem;
+}
+
+.cactus_container p:last-child:hover {
+    text-decoration: underline;
 }
 
 .fontGentium {
@@ -187,7 +240,7 @@ body {
 }
 
 
-/* Other text */
+/* NavMenu, Other text */
 
 .fontstyleB {
     font-weight: 200;
@@ -211,6 +264,16 @@ body {
     font-weight: 900;
     font-size: 2em;
     color: var(--cc-black-darker);
+}
+
+
+/* Brand name*/
+
+.fontstyleE {
+    font-weight: 200;
+    font-size: 1.4em;
+    color: var(--cc-black);
+    letter-spacing: 0.3em;
 }
 
 strong {
