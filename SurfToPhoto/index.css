@@ -17,10 +17,80 @@ body {
     --cc-black-real: #000000;
     --cc-black-darker: #121817;
     --cc-black-lighter: #3b4d4b; */
+    --cc-border-color: white;
     margin: 0;
     padding: 0;
-    /* max-height: 100vh;
-    max-width: 100vw;
-    min-height: 100vh;
-    min-width: 100vw; */
 }
+
+.expand {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    /* max-height: 100vh;
+    max-width: 100vw; */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "logotype logotype name name cross cross" "about shop portofolio portofolio social social";
+    flex: 1;
+    background-color: violet;
+}
+
+.grid-container div {
+    /* border: none; */
+}
+
+.logotype {
+    grid-area: logotype;
+    background-color: tomato;
+    border-bottom: var(--cc-border-color) solid 1px;
+    border-right: var(--cc-border-color) solid 1px;
+}
+
+.name {
+    grid-area: name;
+    background-color: turquoise;
+    border-bottom: var(--cc-border-color) solid 1px;
+    border-right: var(--cc-border-color) solid 1px;
+}
+
+.cross {
+    grid-area: cross;
+    background-color: springgreen;
+    border-bottom: var(--cc-border-color) solid 1px;
+}
+
+.about {
+    grid-area: about;
+    background-color: rosybrown;
+    border-right: var(--cc-border-color) solid 1px;
+}
+
+.shop {
+    grid-area: shop;
+    background-color: salmon;
+    border-right: var(--cc-border-color) solid 1px;
+}
+
+.portofolio {
+    grid-area: portofolio;
+    background-color: violet;
+    border-right: var(--cc-border-color) solid 1px;
+}
+
+.social {
+    grid-area: social;
+    background-color: yellow;
+}
+
+
+/* @media only screen and (max-width: 600px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        background-color: saddlebrown;
+    }
+} */
