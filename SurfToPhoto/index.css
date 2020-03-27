@@ -18,6 +18,9 @@ body {
     --cc-black-darker: #121817;
     --cc-black-lighter: #3b4d4b; */
     --cc-border-color: white;
+    --cc-text-color: white;
+    --cc-text-2-color: turquoise;
+    --cs-border-size: 1px;
     margin: 0;
     padding: 0;
 }
@@ -31,66 +34,127 @@ body {
 }
 
 .grid-container {
+    flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: "logotype logotype name name cross cross" "about shop portofolio portofolio social social";
-    flex: 1;
     background-color: violet;
+    background-image: url("media/manoir.private.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .grid-container div {
-    /* border: none; */
+    display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+}
+
+.grid-container div p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container div p:hover {
+    text-decoration: underline;
+}
+
+.grid-2-row {
+    justify-content: center;
+    align-items: flex-start;
+    /* padding-bottom: 2.8em; */
+    /*padding-top: 28rem;*/
+    padding-top: 45vh;
 }
 
 .logotype {
     grid-area: logotype;
-    background-color: tomato;
-    border-bottom: var(--cc-border-color) solid 1px;
-    border-right: var(--cc-border-color) solid 1px;
+    /* background-color: tomato; */
+    border-bottom: var(--cc-border-color) solid var(--cs-border-size);
+    border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
 .name {
     grid-area: name;
-    background-color: turquoise;
-    border-bottom: var(--cc-border-color) solid 1px;
-    border-right: var(--cc-border-color) solid 1px;
+    /* background-color: turquoise; */
+    border-bottom: var(--cc-border-color) solid var(--cs-border-size);
+    border-right: var(--cc-border-color) solid var(--cs-border-size);
+    justify-content: center;
+    align-items: center;
 }
 
 .cross {
     grid-area: cross;
-    background-color: springgreen;
-    border-bottom: var(--cc-border-color) solid 1px;
+    /* background-color: springgreen; */
+    border-bottom: var(--cc-border-color) solid var(--cs-border-size);
 }
 
 .about {
     grid-area: about;
-    background-color: rosybrown;
-    border-right: var(--cc-border-color) solid 1px;
+    /* background-color: rosybrown; */
+    border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
 .shop {
     grid-area: shop;
-    background-color: salmon;
-    border-right: var(--cc-border-color) solid 1px;
+    /* background-color: salmon; */
+    border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
 .portofolio {
     grid-area: portofolio;
-    background-color: violet;
-    border-right: var(--cc-border-color) solid 1px;
+    /* background-color: violet; */
+    border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
 .social {
     grid-area: social;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
+.text-style-1 {
+    font-size: 3em;
+    font-weight: 600;
+    color: var(--cc-text-color);
+}
 
-/* @media only screen and (max-width: 600px) {
+.text-style-2 {
+    font-size: 1em;
+    font-weight: 200;
+    color: var(--cc-text-color);
+    letter-spacing: 0.3em;
+}
+
+@media only screen and (max-width: 1100px) {
+    .text-style-1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
     .grid-container {
         display: flex;
         flex-direction: column;
         background-color: saddlebrown;
+    }
+    .grid-container div {
+        padding-top: initial;
+        border: initial;
+        border-bottom: solid var(--cc-border-color) var(--cs-border-size);
+    }
+}
+
+
+/* @media only screen and (max-height: 830px) {
+    .grid-2-row {
+        padding-top: 20rem;
+    }
+}
+
+@media only screen and (max-height: 690px) {
+    .grid-2-row {
+        padding-top: initial;
     }
 } */
