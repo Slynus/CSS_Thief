@@ -1,0 +1,26 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    /* --cc-green: #e1eae6;
+    --cc-white: #fdf8f4;
+    --cc-blue: #e3f7ff;
+    --cc-red: #ffe7e3;
+    --cc-black: #242f2e;
+    --cc-orange: #ffa661;
+    --cc-orange-glow: #ff913b;
+    --cc-white-darker: #e5e0dd;
+    --cc-green-darker: #cdd5d1;
+    --cc-black-real: #000000;
+    --cc-black-darker: #121817;
+    --cc-black-lighter: #3b4d4b; */
+    margin: 0;
+    padding: 0;
+    /* max-height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw; */
+}
