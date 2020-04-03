@@ -53,24 +53,33 @@ body {
     opacity: 0;
 }
 
-#img-holderA.img-holder-anim {
+#img-holderC {
+    position: absolute;
     opacity: 0;
 }
 
-#img-holderB.img-holder-anim {
+#img-holderA.opacitySwitch {
+    opacity: 0;
+}
+
+#img-holderB.opacitySwitch {
+    opacity: 1;
+}
+
+#img-holderC.opacitySwitch {
     opacity: 1;
 }
 
 #img-holderB.background-1 {
-    background-image: url("media/manoir.private.jpg");
+    background-image: url("media/flex.private.jpg");
 }
 
 #img-holderB.background-2 {
     background-image: url("media/cerf.private.jpg");
 }
 
-#img-holderB.background-3 {
-    background-image: url("media/flex.private.jpg");
+.img-holder.background-3 {
+    background-image: url("media/manoir.private.jpg");
 }
 
 #img-holderB.background-4 {
