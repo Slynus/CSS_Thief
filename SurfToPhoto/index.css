@@ -4,19 +4,10 @@
     box-sizing: border-box;
 }
 
+
+/* Shared variables */
+
 body {
-    /* --cc-green: #e1eae6;
-    --cc-white: #fdf8f4;
-    --cc-blue: #e3f7ff;
-    --cc-red: #ffe7e3;
-    --cc-black: #242f2e;
-    --cc-orange: #ffa661;
-    --cc-orange-glow: #ff913b;
-    --cc-white-darker: #e5e0dd;
-    --cc-green-darker: #cdd5d1;
-    --cc-black-real: #000000;
-    --cc-black-darker: #121817;
-    --cc-black-lighter: #3b4d4b; */
     --cc-border-color: white;
     --cc-text-color: white;
     --cc-text-2-color: turquoise;
@@ -29,35 +20,85 @@ body {
     display: flex;
     min-height: 100vh;
     min-width: 100vw;
-    /* max-height: 100vh;
-    max-width: 100vw; */
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 
-.grid-container {
+
+/* Background image effects */
+
+.img-holder {
+    /* background-color: violet; */
+    /* background-image: url("media/manoir.private.jpg"); */
+    /* background-image: url("media/cerf.private.jpg"); */
+    /* background-image: url("media/shoot.private.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#img-holderA {
+    background-image: url("media/flex.private.jpg");
+    opacity: 1;
+}
+
+#img-holderB {
+    position: absolute;
+    opacity: 0;
+}
+
+#img-holderA.img-holder-anim {
+    opacity: 0;
+}
+
+#img-holderB.img-holder-anim {
+    opacity: 1;
+}
+
+#img-holderB.background-1 {
+    background-image: url("media/manoir.private.jpg");
+}
+
+#img-holderB.background-2 {
+    background-image: url("media/cerf.private.jpg");
+}
+
+#img-holderB.background-3 {
+    background-image: url("media/flex.private.jpg");
+}
+
+#img-holderB.background-4 {
+    background-image: url("media/shoot.private.jpg");
+}
+
+
+/* Main Grid Layout */
+
+#grid-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: "logotype logotype name name cross cross" "about shop portofolio portofolio social social";
-    background-color: violet;
-    background-image: url("media/manoir.private.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.grid-container div {
+#grid-container div {
     display: flex;
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
 }
 
-.grid-container div p {
-    font-family: 'Roboto', sans-serif;
-}
-
-.grid-container div p:hover {
+#grid-container div p:hover {
     text-decoration: underline;
 }
 
@@ -69,14 +110,14 @@ body {
     padding-top: 45vh;
 }
 
-.logotype {
+#logotype {
     grid-area: logotype;
     /* background-color: tomato; */
     border-bottom: var(--cc-border-color) solid var(--cs-border-size);
     border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
-.name {
+#name {
     grid-area: name;
     /* background-color: turquoise; */
     border-bottom: var(--cc-border-color) solid var(--cs-border-size);
@@ -85,39 +126,43 @@ body {
     align-items: center;
 }
 
-.cross {
+#cross {
     grid-area: cross;
     /* background-color: springgreen; */
     border-bottom: var(--cc-border-color) solid var(--cs-border-size);
 }
 
-.about {
+#about {
     grid-area: about;
     /* background-color: rosybrown; */
     border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
-.shop {
+#shop {
     grid-area: shop;
     /* background-color: salmon; */
     border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
-.portofolio {
+#portofolio {
     grid-area: portofolio;
     /* background-color: violet; */
     border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
-.social {
+#social {
     grid-area: social;
     /* background-color: yellow; */
 }
 
+
+/* Police & Text */
+
 .text-style-1 {
     font-size: 3em;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--cc-text-color);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .text-style-2 {
@@ -125,7 +170,15 @@ body {
     font-weight: 200;
     color: var(--cc-text-color);
     letter-spacing: 0.3em;
+    font-family: 'Montserrat', sans-serif;
 }
+
+.text-style-2 p {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Responsives media querys */
 
 @media only screen and (max-width: 1100px) {
     .text-style-1 {
@@ -134,25 +187,31 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
-    .grid-container {
+    #grid-container {
         display: flex;
         flex-direction: column;
-        background-color: saddlebrown;
     }
-    .grid-container div {
+    #grid-container div {
         padding-top: initial;
         border: initial;
         border-bottom: solid var(--cc-border-color) var(--cs-border-size);
     }
-}
-
-
-/* @media only screen and (max-height: 830px) {
-    .grid-2-row {
-        padding-top: 20rem;
+    .img-holder {
+        background-color: saddlebrown;
     }
 }
 
+@media only screen and (max-height: 830px) {
+    .img-holder {
+        overflow: scroll;
+    }
+    #grid-container {
+        overflow: scroll;
+    }
+}
+
+
+/*
 @media only screen and (max-height: 690px) {
     .grid-2-row {
         padding-top: initial;

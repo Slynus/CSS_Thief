@@ -1,2 +1,5 @@
 https://fonts.google.com/specimen/Roboto
 https://dribbble.com/shots/4635275-Month-of-Rebounds-Day-01
+https://awik.io/background-image-zoom-hover/
+https://stackoverflow.com/questions/9483364/css3-background-image-transition
+https://css-tricks.com/controlling-css-animations-transitions-javascript/
