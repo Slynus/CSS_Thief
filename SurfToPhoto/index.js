@@ -1,14 +1,13 @@
-let grid = document.getElementById("grid-container");
-let imgHolderA = document.getElementById("img-holderA");
-let imgHolderB = document.getElementById("img-holderB");
-let imgHolderC = document.getElementById("img-holderC");
-let imgHolderD = document.getElementById("img-holderD");
-let imgHolderE = document.getElementById("img-holderE");
-let aboutP = document.getElementById("about-p");
-let shopP = document.getElementById("shop-p");
-let portofolioP = document.getElementById("portofolio-p");
-let socialP = document.getElementById("social-p");
-
+const grid = document.getElementById("grid-container");
+const imgHolderA = document.getElementById("img-holderA");
+const imgHolderB = document.getElementById("img-holderB");
+const imgHolderC = document.getElementById("img-holderC");
+const imgHolderD = document.getElementById("img-holderD");
+const imgHolderE = document.getElementById("img-holderE");
+const aboutP = document.getElementById("about-p");
+const shopP = document.getElementById("shop-p");
+const portofolioP = document.getElementById("portofolio-p");
+const socialP = document.getElementById("social-p");
 
 aboutP.addEventListener("mouseover", switchOpacity);
 aboutP.addEventListener("mouseout", switchOpacity);
@@ -20,12 +19,28 @@ socialP.addEventListener("mouseover", switchOpacity);
 socialP.addEventListener("mouseout", switchOpacity);
 
 function switchOpacity(event) {
-    let imgHolder = document.getElementById(mapHolderP[event.target.id]);
+    const imgHolder = document.getElementById(mapHolderP[event.target.id]);
     imgHolder.classList.toggle("opacitySwitch");
 }
-let mapHolderP = {
+const mapHolderP = {
     "about-p": "img-holderB",
     "shop-p": "img-holderC",
     "portofolio-p": "img-holderD",
     "social-p": "img-holderE"
 }
+
+let canvas = document.getElementById('about-canvas');
+
+
+// canvas.width = canvas.height * (canvas.clientWidth / canvas.clientHeight);
+// Set the values from CSS setting. TO DO update this when using requestAnimationFrame for dynamic resizing
+canvas.width = canvas.clientWidth;
+canvas.height = canvas.clientHeight;
+
+
+console.log(canvas.width);
+
+ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'yellow';
+ctx.fillRect(0, 0, 64, 64);
