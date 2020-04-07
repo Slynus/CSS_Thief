@@ -279,3 +279,75 @@ body {
 strong {
     font-size: 1.5em;
 }
+
+@media only screen and (max-width: 1000px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        min-width: 100vw;
+        max-width: 100%;
+    }
+    #big_cactus_container {
+        display: none;
+    }
+    #menu_list p {
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #cart {
+        margin-right: 2rem;
+    }
+    #logo_container {
+        margin-left: 2vw;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #menu_list {
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+        position: initial;
+        background-color: var(--cc-white);
+    }
+    .fontstyleA {
+        font-size: 4em;
+    }
+    #cart {
+        display: none;
+    }
+    #logo_container {
+        height: 6em;
+    }
+    .fontstyleE {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .fontstyleA {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-height: 650px) and (min-width: 450px) {
+    #menu {
+        position: initial;
+        background-color: var(--cc-white);
+    }
+    #content_container {
+        max-height: initial;
+        min-height: initial;
+    }
+    .fontstyleA {
+        font-size: 4em;
+    }
+}
