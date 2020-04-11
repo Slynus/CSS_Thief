@@ -30,7 +30,6 @@ function enableBgAnim() {
     portofolioP.addEventListener("mouseout", switchOpacity);
     socialP.addEventListener("mouseover", switchOpacity);
     socialP.addEventListener("mouseout", switchOpacity);
-    console.log("test");
 }
 
 export { enableBgAnim };

@@ -185,6 +185,15 @@ canvas {
     margin-top: 0.5em;
 }
 
+#main-canvas {
+    position: absolute;
+    pointer-events: none;
+    /* top: 1em; */
+    height: 80vh;
+    width: 80vw;
+    margin: 10vh 10vw;
+}
+
 
 /* Responsives media querys */
 
