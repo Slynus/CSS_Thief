@@ -49,24 +49,24 @@ body {
 }
 
 #img-holderA {
-    background-image: url("media/flex.private.jpg");
+    background-image: url("media/bg/jeremy-bishop-GntGR-SHkXE-unsplash-web.jpg");
     opacity: 1;
 }
 
 #img-holderB {
-    background-image: url("media/cerf.private.jpg");
+    background-image: url("media/bg/zachary-shea-MAFUZ8Nh7XQ-unsplash-web.jpg");
 }
 
 #img-holderC {
-    background-image: url("media/manoir.private.jpg");
+    background-image: url("media/bg/vladimir-kudinov-RKiMg1bwsMY-unsplash-web.jpg");
 }
 
 #img-holderD {
-    background-image: url("media/shoot.private.jpg");
+    background-image: url("media/bg/johny-goerend-XWWKKdG4Arg-unsplash-web.jpg");
 }
 
 #img-holderE {
-    background-color: black;
+    background-image: url("media/bg/joey-pilgrim-I3AMPLzJjW8-unsplash-web.jpg");
 }
 
 
