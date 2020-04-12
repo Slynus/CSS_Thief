@@ -109,6 +109,12 @@ body {
     border-right: var(--cc-border-color) solid var(--cs-border-size);
 }
 
+#logotype-img {
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+
 #name {
     grid-area: name;
     /* background-color: turquoise; */
@@ -122,6 +128,15 @@ body {
     grid-area: cross;
     /* background-color: springgreen; */
     border-bottom: var(--cc-border-color) solid var(--cs-border-size);
+}
+
+#cross-img {
+    height: 25%;
+    width: 25%;
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: auto;
+    /* margin-right: auto; */
 }
 
 #about {
@@ -148,6 +163,9 @@ body {
 }
 
 
+/* Logotype & Cross */
+
+
 /* Police & Text */
 
 .text-style-1 {
@@ -166,11 +184,11 @@ body {
 }
 
 .text-style-2 p {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 
-/* HTML Canvas */
+/* HTML Canvas : Canceled */
 
 #about-p {
     /* position: absolute; */
@@ -215,6 +233,9 @@ canvas {
     }
     .img-holder {
         background-color: saddlebrown;
+    }
+    #grid-container #cross {
+        display: none;
     }
 }
 
