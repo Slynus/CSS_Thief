@@ -36,7 +36,7 @@ body {
     background-position: top;
     width: 100vw;
     height: 100vh;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 
 .img-holderOff {
