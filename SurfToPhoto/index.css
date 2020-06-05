@@ -91,7 +91,7 @@ body {
 }
 
 #grid-container div p:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .grid-2-row {
